@@ -1,7 +1,7 @@
 # CV Privacy Split (private/ + public templates)
 
 ## Objective
-Make the project shareable while keeping Darwin's personal CV data local-only: personal masters move to gitignored `private/`, neutral example templates ship publicly, and git history is rewritten to remove every personal identifier.
+Make the project shareable while keeping the owner's personal CV data local-only: personal masters move to gitignored `private/`, neutral example templates ship publicly, and git history is rewritten to remove every personal identifier.
 
 ## Problem / Why
 User asked for new masters for other people to use, with his current masters kept in a `private/` folder included in `.gitignore` (only he has access). Exploration found the old masters were already committed AND pushed to GitHub — ignoring the folder alone would not remove them from history, so a history rewrite + force push was required (user approved "Limpiar historial"). User also approved "Neutralizar ligero": generic `author` in package.json, neutral README/scripts, premiums staying only in `private/`.
@@ -17,7 +17,7 @@ User asked for new masters for other people to use, with his current masters kep
 ## Constraints
 - Old masters must NOT be deleted from disk (user: "no los borres").
 - Everything under `private/` stays untracked (root `.gitignore` has `private/`; folder has its own `*` ignore with `!.gitignore`/`!README.md` exceptions).
-- Old PDFs (`out/GomezD_CV_*.pdf`) relocated to `private/out/` (ignored).
+- Old PDFs (`out/Initials_CV_*.pdf`, LastnameInitial convention) relocated to `private/out/` (ignored).
 - No Co-Authored-By / no AI attribution in commits.
 
 ## Tasks
