@@ -5,6 +5,9 @@ node_modules/
 dist/
 out/
 
+# Generated personal output (PDFs with real personal data)
+private/out/
+
 # OS files
 .DS_Store
 
@@ -20,3 +23,6 @@ pnpm-debug.log*
 # Editor
 .vscode/
 .idea/
+
+# Private personal data (never commit)
+private/

@@ -8,10 +8,11 @@
   },
   "scripts": {
     "build": "tsc",
-    "cv": "tsc && node dist/cli.js data/cv-master.md --out out/GomezD_CV_ES.pdf && node dist/cli.js data/cv-master-en.md --out out/GomezD_CV_EN.pdf",
-    "cv:es": "tsc && node dist/cli.js data/cv-master.md --out out/GomezD_CV_ES.pdf",
-    "cv:en": "tsc && node dist/cli.js data/cv-master-en.md --out out/GomezD_CV_EN.pdf",
-    "cv:tsx": "tsx src/cli.ts data/cv-master.md --out out/GomezD_CV_ES.pdf && tsx src/cli.ts data/cv-master-en.md --out out/GomezD_CV_EN.pdf"
+    "cv:es": "tsc && node dist/cli.js data/examples/cv-example-es.md --out out/CV_ES_example.pdf",
+    "cv:en": "tsc && node dist/cli.js data/examples/cv-example-en.md --out out/CV_EN_example.pdf",
+    "cv": "tsc && node dist/cli.js data/examples/cv-example-es.md --out out/CV_ES_example.pdf && node dist/cli.js data/examples/cv-example-en.md --out out/CV_EN_example.pdf",
+    "cv:tsx": "tsx src/cli.ts data/examples/cv-example-es.md --out out/CV_ES_example.pdf && tsx src/cli.ts data/examples/cv-example-en.md --out out/CV_EN_example.pdf",
+    "cv:private": "tsc && node dist/cli.js private/cv-master.md --out private/out/GomezD_CV_ES.pdf && node dist/cli.js private/cv-master-en.md --out private/out/GomezD_CV_EN.pdf"
   },
   "keywords": [
     "resume",
