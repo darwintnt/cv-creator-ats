@@ -8,7 +8,7 @@ The repository ships neutral **example templates** (`data/examples/`) so anyone 
 
 1. `pnpm install`
 2. `pnpm cv`
-3. Open `out/CV_ES_example.pdf` — 2 pages, Letter, text extractable.
+3. Open `out/CV_ES_example.pdf` — Letter, text extractable (output length varies with your content).
 
 Requires Node 22+. Works with pnpm (recommended) or npm — the scripts call `tsc` directly, so any package manager can run them.
 
