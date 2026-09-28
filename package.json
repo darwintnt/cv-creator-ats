@@ -1,0 +1,42 @@
+{
+  "name": "cv-creator",
+  "version": "1.0.0",
+  "description": "Generates an ATS-friendly PDF resume from a markdown master file",
+  "type": "module",
+  "bin": {
+    "cv-pdf": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "cv": "tsc && node dist/cli.js data/cv-master.md --out out/GomezD_CV_ES.pdf && node dist/cli.js data/cv-master-en.md --out out/GomezD_CV_EN.pdf",
+    "cv:es": "tsc && node dist/cli.js data/cv-master.md --out out/GomezD_CV_ES.pdf",
+    "cv:en": "tsc && node dist/cli.js data/cv-master-en.md --out out/GomezD_CV_EN.pdf",
+    "cv:tsx": "tsx src/cli.ts data/cv-master.md --out out/GomezD_CV_ES.pdf && tsx src/cli.ts data/cv-master-en.md --out out/GomezD_CV_EN.pdf"
+  },
+  "keywords": [
+    "resume",
+    "pdf",
+    "ats",
+    "pdfkit"
+  ],
+  "author": "cv-creator contributors",
+  "license": "ISC",
+  "packageManager": "pnpm@12.6.0",
+  "dependencies": {
+    "pdfkit": "^0.20.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "@types/pdfkit": "^0.17.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "pnpm": {
+    "allowBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
